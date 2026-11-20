@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atelier AR · Vela</title>
+<script src="vendor/aframe.min.js"></script><script src="vendor/aframe-ar.js"></script><script src="puzzle.js"></script>
+<style>a-scene[embedded]{position:fixed;inset:0;width:100vw;height:100vh}body{margin:0;overflow:hidden;font:16px system-ui}aside{position:fixed;z-index:3;bottom:1rem;left:1rem;right:1rem;max-width:30rem;background:#182926;color:white;padding:1rem;border-radius:12px;pointer-events:none}strong{display:block;font-size:1.25rem;margin-bottom:.3rem}</style></head>
+<body><aside><strong>Așază vela</strong><span id="mesaj">Permite accesul la cameră și încadrează planșa.</span></aside>
+<a-scene embedded vr-mode-ui="enabled: false" renderer="alpha: true" arjs="sourceType: webcam; detectionMode: mono; cameraParametersUrl: markeri/camera_para.dat; debugUIEnabled: false" ghid>
+<a-marker id="plansa" type="pattern" url="markeri/patt.hiro" size="0.05">
+<a-entity id="contur" position="0.1 0.001 0"
+line="start: -0.044 0 -0.032; end: 0.044 0 -0.032; color: orange"
+line__b="start: 0.044 0 -0.032; end: 0 0 0.064; color: orange"
+line__c="start: 0 0 0.064; end: -0.044 0 -0.032; color: orange"></a-entity></a-marker>
+<a-marker id="piesa" type="pattern" url="markeri/patt.kanji" size="0.03"></a-marker><a-entity camera="near: 0.01"></a-entity>
+</a-scene></body></html>

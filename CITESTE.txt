@@ -1,0 +1,24 @@
+PUZZLE AR — primul laborator
+1. Extrage arhiva. Deschide folderul care conține index.html în VS Code.
+2. Deschide tipar.html în browser. Imprimă ambele pagini A4, peisaj, 100%,
+   fără anteturi sau subsoluri. Verifică laturile negre: 50 mm și 30 mm.
+3. Păstrează planșa întreagă. Lipește pagina a doua pe carton și decupează
+   pe conturul triunghiului. Pentru acest test ține piesa plat pe planșă.
+4. În terminalul folderului rulează pe Windows:
+   py -m http.server 8000 --bind 127.0.0.1
+   Pe macOS/Linux: python3 -m http.server 8000 --bind 127.0.0.1
+5. Deschide http://localhost:8000 în browser pe același calculator.
+   Permite camera, ține ambii markeri complet vizibili, poziționează vela
+   după contur și menține poziția o jumătate de secundă. Ctrl+C oprește serverul.
+6. Pe telefon folosește o adresă HTTPS. O opțiune este GitHub Pages:
+   într-un repository public încarcă index.html, puzzle.js și folderele
+   vendor și markeri în rădăcină. Settings > Pages > Deploy from a branch >
+   main > /(root) > Save. Deschide pe telefon adresa afișată la Pages.
+
+index.html definește scena, dimensiunile markerilor și conturul.
+puzzle.js verifică poziția și unghiul piesei în coordonatele planșei.
+tipar.html conține planșa și piesa la scara folosită în cod.
+Biblioteci incluse: A-Frame 1.6.0, AR.js 3.4.7, fișierele patt.hiro,
+patt.kanji și camera_para.dat din distribuția AR.js. Surse:
+https://aframe.io/releases/1.6.0/aframe.min.js
+https://github.com/AR-js-org/AR.js/tree/3.4.7
